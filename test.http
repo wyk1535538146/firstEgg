@@ -1,0 +1,7 @@
+POST http://127.0.0.1:7001/postTest
+Content-Type: application/json
+
+{
+    "uid":"1111",
+    "password": "123456"
+}

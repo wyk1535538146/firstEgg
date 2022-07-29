@@ -8,5 +8,8 @@ module.exports = app => {
   //router.post('/home', controller.home.index);
   router.get('/login/:email/:password', controller.userController.userLogin);
   router.get('/register/:email/:password/:nickname/:disabled', controller.userController.userRegister);
-  router.get('/home', controller.userController.userList)
+  router.get('/home', controller.userController.getUserList);
+  router.get('/disable/:email', controller.userController.disableUser);
+  router.get('/unDisable/:email', controller.userController.unDisableUser);
+
 };

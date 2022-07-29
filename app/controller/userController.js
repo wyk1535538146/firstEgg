@@ -7,7 +7,6 @@ class UserController extends Controller{
         const { ctx } = this;
         let email = ctx.params.email;
         let password = ctx.params.password;
-        
         //取redis
         const userFromRedis = await this.ctx.service.redisService.get(email);
         const res = await ctx.service.userService.login(email, password);
